@@ -19,9 +19,6 @@ namespace PresentationService.Services
     public interface INetworkService
     {
         Task<List<ViewData>> GetSheet(RequestParams dashboardParams);
-        Task<List<ViewData>> GetViewsForWorkbooks(List<string> workbookList);
-        Task<List<string>> GetWorkbooksForSite(List<string> dashboardList);
-        Task<List<ViewData>> QueryViewData(List<ViewData> viewList, RequestParams globalFilters);
     }
 
     public class NetworkService : INetworkService
@@ -52,7 +49,7 @@ namespace PresentationService.Services
         }
 
         //To-do: Try to optimize this with yield
-        public async Task<List<ViewData>> QueryViewData(List<ViewData> viewList, RequestParams globalFilters)
+        private async Task<List<ViewData>> QueryViewData(List<ViewData> viewList, RequestParams globalFilters)
         {
             string viewUrl = "";
             
@@ -77,7 +74,7 @@ namespace PresentationService.Services
             return viewList;
         }
 
-        public async Task<List<ViewData>> GetViewsForWorkbooks(List<string> workbookList)
+        private async Task<List<ViewData>> GetViewsForWorkbooks(List<string> workbookList)
         {
             List<ViewData> viewList = new List<ViewData>();
             foreach (string workbookId in workbookList)
@@ -117,7 +114,7 @@ namespace PresentationService.Services
             return viewList;
         }
 
-        public async Task<List<string>> GetWorkbooksForSite(List<string> dashboardList)
+        private async Task<List<string>> GetWorkbooksForSite(List<string> dashboardList)
         {
             try
             {

@@ -33,12 +33,9 @@ namespace PresentationService.Controllers
             {
                 return BadRequest();
             }
-            //var networkService = new NetworkService(_logger);
             var viewDataList = await _networkService.GetSheet(dashboardParams);
-            //var pptService = new PowerpointService(_logger);
             var ppt = _powerpointService.GeneratePPT(viewDataList);
             return ppt;
         }
-
     }
 }

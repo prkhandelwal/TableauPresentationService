@@ -11,7 +11,9 @@ namespace PresentationService.Models
 {
     public class ViewData
     {
-        public ViewData(string name, string viewId, string chartType, string primaryAxis, List<string> serieList)
+        public ViewData(string name, string viewId, 
+            string chartType, string primaryAxis,
+            List<string> serieList)
         {
             this.Name= name;
             this.ViewId = viewId;

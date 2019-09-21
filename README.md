@@ -7,3 +7,6 @@ This is a service to generate fully customizable PowerPoint Presentations from T
 1. .NET Core 
 2. Syncfusion License (Community Edition is free!)
 3. Tableau Server
+
+## For More details
+[link.medium.com/XQjoCpFea0](link.medium.com/XQjoCpFea0)

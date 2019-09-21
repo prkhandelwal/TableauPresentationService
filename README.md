@@ -1,4 +1,4 @@
-# TableauPresentationService
+# Tableau Presentation Service
 
 This is a service to generate fully customizable PowerPoint Presentations from Tableau Dashboards. The service is built on .NET Core.
 
